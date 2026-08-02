@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of /.well-known/ on yulife.com and api.yulife.com
+host: https://api.yulife.com
+notes: >-
+  YuLife exposes no public developer portal. api.yulife.com is the app backend
+  ("Hello yu!" at root). Its only discoverable /.well-known document is an
+  OpenID Connect discovery document whose issuer is https://api.uk.yulife.com
+  (RS256, jwks published). No security.txt, api-catalog, or ai-plugin.json.
+documents:
+- path: /.well-known/openid-configuration
+  host: https://api.yulife.com
+  status: 200
+  file: yulife-openid-configuration.json
+- path: /.well-known/jwks.json
+  host: https://api.uk.yulife.com
+  status: 200
+- path: /.well-known/security.txt
+  host: https://yulife.com
+  status: 404
+- path: /.well-known/security.txt
+  host: https://api.yulife.com
+  status: 500
+- path: /.well-known/oauth-authorization-server
+  host: https://yulife.com
+  status: 404
+- path: /.well-known/api-catalog
+  host: https://yulife.com
+  status: 404
+- path: /.well-known/ai-plugin.json
+  host: https://yulife.com
+  status: 404

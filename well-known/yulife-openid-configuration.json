@@ -1,0 +1,1 @@
+{"id_token_signing_alg_values_supported":["RS256"],"issuer":"https://api.uk.yulife.com","jwks_uri":"https://api.uk.yulife.com/.well-known/jwks.json","response_types_supported":["token"],"subject_types_supported":["public"]}
